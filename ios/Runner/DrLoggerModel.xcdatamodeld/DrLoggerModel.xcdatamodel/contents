@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23231" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="AudioChunk" representedClassName="AudioChunk" syncable="YES" codeGenerationType="class">
+        <attribute name="amplitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="audioId" attributeType="String"/>
+        <attribute name="chunkNumber" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" attributeType="String"/>
+        <attribute name="durationMs" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="filePath" attributeType="String"/>
+        <attribute name="gcsPath" optional="YES" attributeType="String"/>
+        <attribute name="publicUrl" optional="YES" attributeType="String"/>
+        <attribute name="sessionId" attributeType="String"/>
+        <attribute name="status" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="audioId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Session" representedClassName="Session" syncable="YES" codeGenerationType="class">
+        <attribute name="endTime" optional="YES" attributeType="String"/>
+        <attribute name="patientId" attributeType="String"/>
+        <attribute name="serverSessionId" optional="YES" attributeType="String"/>
+        <attribute name="sessionId" attributeType="String"/>
+        <attribute name="startTime" optional="YES" attributeType="String"/>
+        <attribute name="status" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="sessionId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+</model>
